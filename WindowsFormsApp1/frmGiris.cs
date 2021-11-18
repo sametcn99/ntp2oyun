@@ -15,9 +15,7 @@ namespace WindowsFormsApp1
         public frmGiris()
         {
             InitializeComponent();
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             if (tboxAd.Text != "" && tboxSyd.Text != "")
@@ -27,6 +25,7 @@ namespace WindowsFormsApp1
                 frmOyun frmoyn = new frmOyun();
                 frmoyn.adSoyad = tboxAd.Text + " " + tboxSyd.Text;
                 frmoyn.Show();
+                this.Hide();
             }
             else
             {
