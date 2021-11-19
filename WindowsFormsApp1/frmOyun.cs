@@ -13,9 +13,10 @@ namespace WindowsFormsApp1
 {
     public partial class frmOyun : Form
     {
-        static int sonuc, sure = 30;
+        static int sonuc;
+        public string adSoyad;
+        public int btnInterval, sure;
         Random rnd = new Random();
-
         public frmOyun()
         {
             InitializeComponent();
@@ -23,9 +24,10 @@ namespace WindowsFormsApp1
             label2.Text = "Süre";
             tmr_sure.Start();
         }
-        public string adSoyad;
+
         private void tmr_game_Tick(object sender, EventArgs e)
         {
+            tmr_game.Interval = btnInterval;
             Button btn = new Button();
             btn.Size = new Size(70, 35);
             btn.Text = rnd.Next(100).ToString();

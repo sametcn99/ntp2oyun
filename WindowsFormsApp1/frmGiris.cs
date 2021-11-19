@@ -24,12 +24,27 @@ namespace WindowsFormsApp1
 
                 frmOyun frmoyn = new frmOyun();
                 frmoyn.adSoyad = tboxAd.Text + " " + tboxSyd.Text;
+                if (radioKolay.Checked)
+                {
+                    frmoyn.btnInterval = 70;
+                    frmoyn.sure = 50;
+                }
+                else if (radioOrta.Checked)
+                {
+                    frmoyn.btnInterval = 100;
+                    frmoyn.sure = 30;
+                }
+                else if (radioZor.Checked)
+                {
+                    frmoyn.btnInterval = 1000;
+                    frmoyn.sure = 10;                    
+                }
                 frmoyn.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Lütfen Ad Soyad Girin");
+                MessageBox.Show("Lütfen Ad Soyad Girin.");
             }
         }
     }

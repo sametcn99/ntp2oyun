@@ -40,7 +40,7 @@
             // 
             // tmr_game
             // 
-            this.tmr_game.Interval = 1000;
+            this.tmr_game.Interval = 10;
             this.tmr_game.Tick += new System.EventHandler(this.tmr_game_Tick);
             // 
             // label2
